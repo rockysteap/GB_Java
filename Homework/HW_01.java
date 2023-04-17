@@ -34,14 +34,17 @@ public class HW_01 {
         StringBuilder sb = new StringBuilder();
         for (int i = in_number; i <= Short.MAX_VALUE; i++)
             if (i % in_divider == 0) sb.append(i).append(" ");
+        if (sb.length() > 0) {
+            String[] strings = sb.toString().split(" ");
+            int[] result = new int[strings.length];
 
-        String[] strings = sb.toString().split(" ");
-        int[] result = new int[strings.length];
-
-        for (int i = 0; i < strings.length; i++) {
-            result[i] = Integer.parseInt(strings[i]);
+            for (int i = 0; i < strings.length; i++) {
+                result[i] = Integer.parseInt(strings[i]);
+            }
+            return result;
+        } else {
+            return new int[0];
         }
-        return result;
     }
 
     public static int[] get_not_divisible_array(int in_number, int in_divider) {
