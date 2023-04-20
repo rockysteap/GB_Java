@@ -14,17 +14,9 @@ public class convert {
         System.out.println(b); // 123
 //        b = Byte.parseByte("1234");  // Byte: 0 - 255
 //        System.out.println(b); // NumberFormatException: Value out of range
-
-
-
-
-
-
-
-
-
-
-
+        double a = Double.parseDouble(String.valueOf(0.5));
+        System.out.println(a);
+        System.out.println((Math.pow(-12,0.5)));
 
     }
 }
