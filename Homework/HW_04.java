@@ -74,14 +74,12 @@ public class HW_04 {
             case "patronimyc" -> new ArrayList<>(in_patronimyc);
             default -> new ArrayList<>();
         };
-        ArrayList<Integer> query_int_list = switch (in_query_list) {
-            case "age" -> new ArrayList<>(in_age);
-            default -> new ArrayList<>();
-        };
-        ArrayList<Character> query_chr_list = switch (in_query_list) {
-            case "gender" -> new ArrayList<>(in_gender);
-            default -> new ArrayList<>();
-        };
+
+        ArrayList<Integer> query_int_list = in_query_list.equals("age") ?
+                new ArrayList<>(in_age) : new ArrayList<>();
+
+        ArrayList<Character> query_chr_list = in_query_list.equals("gender") ?
+                new ArrayList<>(in_gender) : new ArrayList<>();
 
         System.out.println("-".repeat(44));
         System.out.println("| id |   Фамилия   | И.| О.| Возраст | Пол |");
