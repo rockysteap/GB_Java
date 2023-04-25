@@ -66,8 +66,8 @@ public class HW_04 {
                                   LinkedList<Integer> in_id,
                                   String in_query_list,
                                   String in_query
-                                  )
-    {
+                                  ) {
+
         ArrayList<String> query_str_list = switch (in_query_list) {
             case "lastname" -> new ArrayList<>(in_lastname);
             case "firstname" -> new ArrayList<>(in_firstname);
